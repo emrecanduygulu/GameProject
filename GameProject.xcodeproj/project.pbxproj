@@ -14,6 +14,8 @@
 		2569BBAB2976DB2400847AB3 /* GameProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBA92976DB2400847AB3 /* GameProject.xcdatamodeld */; };
 		2569BBAD2976DB2600847AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2569BBAC2976DB2600847AB3 /* Assets.xcassets */; };
 		2569BBB02976DB2600847AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2569BBAE2976DB2600847AB3 /* LaunchScreen.storyboard */; };
+		2569BBB92976E00300847AB3 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBB82976E00300847AB3 /* Api.swift */; };
+		2569BBBE2976E8E700847AB3 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBBD2976E8E700847AB3 /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2569BBAC2976DB2600847AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2569BBAF2976DB2600847AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2569BBB12976DB2600847AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2569BBB82976E00300847AB3 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		2569BBBD2976E8E700847AB3 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		2569BB9F2976DB2400847AB3 /* GameProject */ = {
 			isa = PBXGroup;
 			children = (
+				25CD78542978272A00721955 /* Screens */,
+				2569BBB72976DF9B00847AB3 /* Network */,
 				2569BBA02976DB2400847AB3 /* AppDelegate.swift */,
 				2569BBA22976DB2400847AB3 /* SceneDelegate.swift */,
 				2569BBA42976DB2400847AB3 /* ViewController.swift */,
@@ -68,6 +74,30 @@
 				2569BBA92976DB2400847AB3 /* GameProject.xcdatamodeld */,
 			);
 			path = GameProject;
+			sourceTree = "<group>";
+		};
+		2569BBB72976DF9B00847AB3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2569BBB82976E00300847AB3 /* Api.swift */,
+				2569BBBD2976E8E700847AB3 /* GameModel.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		25CD78542978272A00721955 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				25CD78552978273300721955 /* List */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		25CD78552978273300721955 /* List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +116,8 @@
 			dependencies = (
 			);
 			name = GameProject;
+			packageProductDependencies = (
+			);
 			productName = GameProject;
 			productReference = 2569BB9D2976DB2400847AB3 /* GameProject.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +146,8 @@
 				Base,
 			);
 			mainGroup = 2569BB942976DB2400847AB3;
+			packageReferences = (
+			);
 			productRefGroup = 2569BB9E2976DB2400847AB3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,7 +178,9 @@
 				2569BBA52976DB2400847AB3 /* ViewController.swift in Sources */,
 				2569BBAB2976DB2400847AB3 /* GameProject.xcdatamodeld in Sources */,
 				2569BBA12976DB2400847AB3 /* AppDelegate.swift in Sources */,
+				2569BBB92976E00300847AB3 /* Api.swift in Sources */,
 				2569BBA32976DB2400847AB3 /* SceneDelegate.swift in Sources */,
+				2569BBBE2976E8E700847AB3 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
