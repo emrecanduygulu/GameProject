@@ -15,6 +15,8 @@ class CellView: UITableViewCell {
             let gameImage = UIImageView()
             gameImage.clipsToBounds = true
             gameImage.contentMode = .scaleAspectFill
+            gameImage.layer.cornerRadius = 10
+            gameImage.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
             return gameImage
         }()
     lazy var gameLabel = makeLabel(font: .boldSystemFont(ofSize: 18))
@@ -52,6 +54,8 @@ class CellView: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        HStack.backgroundColor = .lightPink.withAlphaComponent(0.25)
+        HStack.layer.cornerRadius = 10
         addSubview(HStack)
         NSLayoutConstraint.activate([
            HStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
@@ -59,7 +63,7 @@ class CellView: UITableViewCell {
            HStack.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
            HStack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
            gameImage.heightAnchor.constraint(equalToConstant: 80),
-           gameImage.widthAnchor.constraint(equalToConstant: 80)
+           gameImage.widthAnchor.constraint(equalToConstant: 80),
         ])
     }
     
@@ -71,7 +75,7 @@ class CellView: UITableViewCell {
 
 private func makeLabel(font: UIFont) -> UILabel {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .darkTeal
         label.numberOfLines = 1
         label.textAlignment = .left
         label.font = font
