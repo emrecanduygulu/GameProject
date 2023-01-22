@@ -11,30 +11,30 @@ import Foundation
 struct GameModel: Codable {
     let count: Int
     let results: [Result]
+    let next: URL?
     
-
     enum CodingKeys: String, CodingKey {
-        case count, results
-        
+        case count, results, next
     }
 }
 
 
 // MARK: - Result
 struct Result: Codable {
-    let id: Int
-    let name: String
-    let released: String
-    let backgroundImage: String
-    let rating: Double
-    let ratingsCount: Int
-    let metacritic, playtime : Int
-    let genres: [Genre]
-    let shortScreenshots: [ShortScreenshot]
+    let id: Int?
+    let name: String?
+    let released: String?
+    let backgroundImage: String?
+    let rating: Double?
+    let ratingsCount: Int?
+    let metacritic: Int?
+    let playtime : Int?
+    let genres: [Genre]?
+    let shortScreenshots: [ShortScreenshot]?
 
     enum CodingKeys: String, CodingKey {
         case id
-        case name = "name"
+        case name
         case released
         case backgroundImage = "background_image"
         case rating
@@ -48,9 +48,9 @@ struct Result: Codable {
 
 // MARK: - Genre
 struct Genre: Codable {
-    let id: Int
-    let name: String
-    let gamesCount: Int
+    let id: Int?
+    let name: String?
+    let gamesCount: Int?
    
     enum CodingKeys: String, CodingKey {
         case id, name
@@ -61,10 +61,10 @@ struct Genre: Codable {
 
 // MARK: - Rating
 struct Rating: Codable {
-    let id: Int
-    let title: Title
-    let count: Int
-    let percent: Double
+    let id: Int?
+    let title: Title?
+    let count: Int?
+    let percent: Double?
 }
 
 enum Title: String, Codable {
@@ -76,8 +76,8 @@ enum Title: String, Codable {
 
 // MARK: - ShortScreenshot
 struct ShortScreenshot: Codable {
-    let id: Int
-    let image: String
+    let id: Int?
+    let image: String?
 }
 
 // MARK: - Encode/decode helpers

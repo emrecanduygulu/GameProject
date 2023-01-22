@@ -13,4 +13,8 @@ extension UIColor {
     static let lightPurple = UIColor(named: "lightPurple")!
     static let lightPink = UIColor(named: "lightPink")!
     static let favoriteYellow = UIColor(named: "favoriteYellow")!
+    static let ratingLightGreen = UIColor(named: "ratingLightGreen")!
+    static let ratingDarkGreen = UIColor(named: "ratingDarkGreen")!
+    static let ratingYellow = UIColor(named: "ratingYellow")!
+    static let ratingRed = UIColor(named: "ratingRed")!
 }

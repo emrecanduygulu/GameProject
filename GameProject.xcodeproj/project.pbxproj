@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25220982297D799400800D3C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 25220981297D799400800D3C /* Kingfisher */; };
 		2569BBA12976DB2400847AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBA02976DB2400847AB3 /* AppDelegate.swift */; };
 		2569BBAB2976DB2400847AB3 /* GameProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBA92976DB2400847AB3 /* GameProject.xcdatamodeld */; };
 		2569BBAD2976DB2600847AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2569BBAC2976DB2600847AB3 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25220982297D799400800D3C /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +155,7 @@
 			);
 			name = GameProject;
 			packageProductDependencies = (
+				25220981297D799400800D3C /* Kingfisher */,
 			);
 			productName = GameProject;
 			productReference = 2569BB9D2976DB2400847AB3 /* GameProject.app */;
@@ -183,6 +186,7 @@
 			);
 			mainGroup = 2569BB942976DB2400847AB3;
 			packageReferences = (
+				25220980297D799400800D3C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 2569BB9E2976DB2400847AB3 /* Products */;
 			projectDirPath = "";
@@ -428,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25220980297D799400800D3C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		25220981297D799400800D3C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25220980297D799400800D3C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2569BBA92976DB2400847AB3 /* GameProject.xcdatamodeld */ = {

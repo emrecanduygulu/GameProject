@@ -21,14 +21,25 @@ class ListViewController: UIViewController, ListViewModelOutput, UITableViewDele
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         viewModel.openGameDetail(indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.games.count - 5 {
+            guard let url = viewModel.next else { return }
+            viewModel.fetchNextPage(with: url)
         }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewSource.searchBar.endEditing(true)
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         viewModel.loadGamesWithFilter(searchTerm: searchText)
     }
     
-   func showData() {
+    func showData() {
         viewSource.tableView.reloadData()
     }
     
@@ -41,11 +52,13 @@ class ListViewController: UIViewController, ListViewModelOutput, UITableViewDele
     }
     
     func isLoading(_ value: Bool) {
-        if value == true {
-                    viewSource.activityIndicator.startAnimating()
-                } else {
-                    viewSource.activityIndicator.stopAnimating()
-                }
+        DispatchQueue.main.async {
+            if value == true {
+                self.viewSource.activityIndicator.startAnimating()
+            } else {
+                self.viewSource.activityIndicator.stopAnimating()
+            }
+        }
     }
     
     private lazy var viewSource = ListView()
@@ -67,12 +80,12 @@ class ListViewController: UIViewController, ListViewModelOutput, UITableViewDele
     }
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-            viewSource.tableView.delegate = self
-            viewSource.tableView.dataSource = self
-            viewSource.searchBar.delegate = self
-            viewModel.output = self
-            title = "Search"
-            viewModel.onViewDidLoad()
-        }
+        super.viewDidLoad()
+        viewSource.tableView.delegate = self
+        viewSource.tableView.dataSource = self
+        viewSource.searchBar.delegate = self
+        viewModel.output = self
+        title = "Home"
+        viewModel.onViewDidLoad()
+    }
 }

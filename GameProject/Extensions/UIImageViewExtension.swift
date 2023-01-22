@@ -6,18 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 extension UIImageView {
     func loadFrom(URLAddress: String) {
         guard let url = URL(string: URLAddress) else {
             return
-        }
-       
-            if let imageData = try? Data(contentsOf: url) {
-                if let loadedImage = UIImage(data: imageData) {
-                    self.image = loadedImage
-                }
             }
+        self.kf.setImage(with: url)
         }
     }
-
