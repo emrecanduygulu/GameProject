@@ -80,6 +80,5 @@ struct ShortScreenshot: Codable {
     let image: String?
 }
 
-// MARK: - Encode/decode helpers
 
 

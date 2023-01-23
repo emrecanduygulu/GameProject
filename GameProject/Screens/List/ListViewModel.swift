@@ -13,11 +13,26 @@ class ListViewModel {
     var games: [Result] = [Result]()
     var next: URL?
     var output: ListViewModelOutput?
+    var selectedGenre: String? = ""
+    var selectedFilter: String? = ""
+    
+    
+    private func getURL() -> URL? {
+        var url = "https://api.rawg.io/api/games?key=dfcc34b246fe42bea540f6fcd701f590"
+        
+        if let selectedGenre = selectedGenre, !selectedGenre.isEmpty {
+            url.append("&&genres=\(selectedGenre)")
+        }
+        if let selectedFilter = selectedFilter, !selectedFilter.isEmpty {
+            url.append("&&ordering=\(selectedFilter)")
+        }
+        return URL(string: url)
+    }
     
     private func fetchGames() {
         output?.isLoading(true)
         
-        guard let url = URL(string: "https://api.rawg.io/api/games?key=dfcc34b246fe42bea540f6fcd701f590") else {
+        guard let url = getURL() else {
             return
         }
         URLSession.shared.dataTask(with: url) {
