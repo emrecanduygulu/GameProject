@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		25220982297D799400800D3C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 25220981297D799400800D3C /* Kingfisher */; };
+		2529DACD297EEBDA00B60A60 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2529DACC297EEBDA00B60A60 /* DetailViewModel.swift */; };
+		2529DACF297EF07300B60A60 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2529DACE297EF07300B60A60 /* DetailModel.swift */; };
+		2529DAD1297EFEDC00B60A60 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2529DAD0297EFEDC00B60A60 /* DetailViewController.swift */; };
+		2529DAD3297F017A00B60A60 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2529DAD2297F017A00B60A60 /* DetailView.swift */; };
 		2569BBA12976DB2400847AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBA02976DB2400847AB3 /* AppDelegate.swift */; };
 		2569BBAB2976DB2400847AB3 /* GameProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBA92976DB2400847AB3 /* GameProject.xcdatamodeld */; };
 		2569BBAD2976DB2600847AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2569BBAC2976DB2600847AB3 /* Assets.xcassets */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2529DACC297EEBDA00B60A60 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		2529DACE297EF07300B60A60 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		2529DAD0297EFEDC00B60A60 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2529DAD2297F017A00B60A60 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		2569BB9D2976DB2400847AB3 /* GameProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2569BBA02976DB2400847AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2569BBAA2976DB2400847AB3 /* GameProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameProject.xcdatamodel; sourceTree = "<group>"; };
@@ -53,6 +61,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2529DACB297EE48A00B60A60 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2529DACC297EEBDA00B60A60 /* DetailViewModel.swift */,
+				2529DACE297EF07300B60A60 /* DetailModel.swift */,
+				2529DAD0297EFEDC00B60A60 /* DetailViewController.swift */,
+				2529DAD2297F017A00B60A60 /* DetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		2569BB942976DB2400847AB3 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +124,7 @@
 		25CD78542978272A00721955 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2529DACB297EE48A00B60A60 /* Detail */,
 				25CD78552978273300721955 /* List */,
 			);
 			path = Screens;
@@ -215,16 +235,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CBE1E7297C378B002FFDD3 /* TabBar.swift in Sources */,
+				2529DACF297EF07300B60A60 /* DetailModel.swift in Sources */,
 				25CBE1EB297C41E3002FFDD3 /* Colors.swift in Sources */,
 				2569BBAB2976DB2400847AB3 /* GameProject.xcdatamodeld in Sources */,
 				25CBE1E9297C3966002FFDD3 /* TabBarItems.swift in Sources */,
 				2569BBA12976DB2400847AB3 /* AppDelegate.swift in Sources */,
 				2569BBB92976E00300847AB3 /* ListViewModel.swift in Sources */,
 				2569BBBE2976E8E700847AB3 /* GameModel.swift in Sources */,
+				2529DACD297EEBDA00B60A60 /* DetailViewModel.swift in Sources */,
 				25CD785A29784BC200721955 /* UIImageViewExtension.swift in Sources */,
 				25CD78572978383A00721955 /* CellView.swift in Sources */,
+				2529DAD3297F017A00B60A60 /* DetailView.swift in Sources */,
 				25CD785F29784EE400721955 /* ListViewController.swift in Sources */,
 				25CD785C29784C0300721955 /* ListView.swift in Sources */,
+				2529DAD1297EFEDC00B60A60 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
