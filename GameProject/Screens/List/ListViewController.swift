@@ -48,7 +48,8 @@ class ListViewController: UIViewController, ListViewModelOutput, UITableViewDele
     }
     
     func openGameDetail(game: Result) {
-        
+        let viewController = DetailViewController(with: DetailViewModel(gameId: game.id ?? 4))
+        show(viewController, sender: nil)
     }
     
     func isLoading(_ value: Bool) {

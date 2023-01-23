@@ -28,9 +28,9 @@ class CellView: UITableViewCell {
         return cView
     }()
     
-    lazy var gameLabel = makeLabel(font: .boldSystemFont(ofSize: 18))
-    lazy var rating = makeLabel(font: .systemFont(ofSize: 14))
-    lazy var ratingCount = makeLabel(font: .systemFont(ofSize: 14))
+    private lazy var gameLabel = makeLabel(font: .boldSystemFont(ofSize: 18))
+    private lazy var rating = makeLabel(font: .systemFont(ofSize: 14))
+    private lazy var ratingCount = makeLabel(font: .systemFont(ofSize: 14))
     
     private lazy var HStack: UIStackView = {
        
