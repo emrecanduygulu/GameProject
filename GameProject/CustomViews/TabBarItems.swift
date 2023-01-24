@@ -21,7 +21,7 @@ enum TabBarItems: Int, CaseIterable {
             
         case .favorites:
             let tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star.fill"), selectedImage: UIImage(systemName: "star.fill"))
-            let controller = ListViewController()
+            let controller = FavoritesViewController()
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.tabBarItem = tabBarItem
             return navigationController

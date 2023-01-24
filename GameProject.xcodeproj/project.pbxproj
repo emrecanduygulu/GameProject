@@ -29,6 +29,9 @@
 		2593D7DF29807E5000009D3B /* NotedGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7DE29807E5000009D3B /* NotedGamesView.swift */; };
 		2593D7E129807E7200009D3B /* NotedGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E029807E7200009D3B /* NotedGamesViewModel.swift */; };
 		2593D7E329807E9A00009D3B /* NotedGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E229807E9A00009D3B /* NotedGamesViewController.swift */; };
+		2593D7E6298097FD00009D3B /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E5298097FD00009D3B /* FavoritesView.swift */; };
+		2593D7E82980990300009D3B /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E72980990300009D3B /* FavoritesViewModel.swift */; };
+		2593D7EA298099D200009D3B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E9298099D200009D3B /* FavoritesViewController.swift */; };
 		25CBE1E7297C378B002FFDD3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1E6297C378B002FFDD3 /* TabBar.swift */; };
 		25CBE1E9297C3966002FFDD3 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1E8297C3965002FFDD3 /* TabBarItems.swift */; };
 		25CBE1EB297C41E3002FFDD3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1EA297C41E3002FFDD3 /* Colors.swift */; };
@@ -62,6 +65,9 @@
 		2593D7DE29807E5000009D3B /* NotedGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesView.swift; sourceTree = "<group>"; };
 		2593D7E029807E7200009D3B /* NotedGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesViewModel.swift; sourceTree = "<group>"; };
 		2593D7E229807E9A00009D3B /* NotedGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesViewController.swift; sourceTree = "<group>"; };
+		2593D7E5298097FD00009D3B /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		2593D7E72980990300009D3B /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		2593D7E9298099D200009D3B /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		25CBE1E6297C378B002FFDD3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		25CBE1E8297C3965002FFDD3 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		25CBE1EA297C41E3002FFDD3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -183,6 +189,16 @@
 			path = NotedGames;
 			sourceTree = "<group>";
 		};
+		2593D7E4298097E200009D3B /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2593D7E5298097FD00009D3B /* FavoritesView.swift */,
+				2593D7E72980990300009D3B /* FavoritesViewModel.swift */,
+				2593D7E9298099D200009D3B /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		25CBE1E5297C3762002FFDD3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +211,7 @@
 		25CD78542978272A00721955 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2593D7E4298097E200009D3B /* Favorites */,
 				2593D7DD29807E3D00009D3B /* NotedGames */,
 				2501DADA297FF77C00D74EDD /* Note */,
 				2529DACB297EE48A00B60A60 /* Detail */,
@@ -315,6 +332,7 @@
 				255349A42980608D007D860F /* NoteView.swift in Sources */,
 				2569BBAB2976DB2400847AB3 /* GameProject.xcdatamodeld in Sources */,
 				25CBE1E9297C3966002FFDD3 /* TabBarItems.swift in Sources */,
+				2593D7E6298097FD00009D3B /* FavoritesView.swift in Sources */,
 				2569BBA12976DB2400847AB3 /* AppDelegate.swift in Sources */,
 				2569BBB92976E00300847AB3 /* ListViewModel.swift in Sources */,
 				2569BBBE2976E8E700847AB3 /* GameModel.swift in Sources */,
@@ -328,6 +346,8 @@
 				25CD785C29784C0300721955 /* ListView.swift in Sources */,
 				2529DAD1297EFEDC00B60A60 /* DetailViewController.swift in Sources */,
 				255349A629806816007D860F /* NoteViewController.swift in Sources */,
+				2593D7E82980990300009D3B /* FavoritesViewModel.swift in Sources */,
+				2593D7EA298099D200009D3B /* FavoritesViewController.swift in Sources */,
 				2593D7E329807E9A00009D3B /* NotedGamesViewController.swift in Sources */,
 				2553499E29805C85007D860F /* GameInterface.swift in Sources */,
 				2593D7E129807E7200009D3B /* NotedGamesViewModel.swift in Sources */,
