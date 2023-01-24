@@ -14,6 +14,9 @@ struct DetailModel: Codable {
     let metacritic: Int?
     let backgroundImage: String?
     let genres: [Genre]
+    let rating: Double?
+    let ratingCount: Int?
+    let id: Int?
     
     enum CodingKeys: String, CodingKey {
         case slug
@@ -22,5 +25,8 @@ struct DetailModel: Codable {
         case metacritic
         case backgroundImage = "background_image"
         case genres
+        case rating
+        case ratingCount = "ratings_count"
+        case id
     }
 }

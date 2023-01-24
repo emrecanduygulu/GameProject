@@ -28,7 +28,7 @@ enum TabBarItems: Int, CaseIterable {
             
         case .notedGames:
             let tabBarItem = UITabBarItem(title: "Noted Games", image: UIImage(systemName: "note.text"), selectedImage: UIImage(systemName: "note.text"))
-            let controller = ListViewController()
+            let controller = NotedGamesViewController()
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.tabBarItem = tabBarItem
             return navigationController

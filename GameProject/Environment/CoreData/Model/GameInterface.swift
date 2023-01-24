@@ -14,7 +14,10 @@ struct GameInterface {
     let slug: String
     let isFavorited: Bool
     let isNoted: Bool
-    let metacritic: Int64
+    let metacritic: Int
     let name: String
     let note: String
+    let rating: Double
+    let ratingCount: Int
+    let id: Int
 }
