@@ -8,6 +8,7 @@
 import Foundation
 
 struct DetailModel: Codable {
+    let slug: String?
     let name: String?
     let descriptionRaw: String?
     let metacritic: Int?
@@ -15,6 +16,7 @@ struct DetailModel: Codable {
     let genres: [Genre]
     
     enum CodingKeys: String, CodingKey {
+        case slug
         case name
         case descriptionRaw = "description_raw"
         case metacritic

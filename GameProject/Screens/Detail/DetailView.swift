@@ -19,7 +19,7 @@ class DetailView: UIView {
         return gameImage
     }()
     
-    private lazy var favoriteButton: UIButton = {
+     lazy var favoriteButton: UIButton = {
         let favButton = UIButton()
         favButton.setTitle("Add to favorites", for: .normal)
         favButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
@@ -30,7 +30,7 @@ class DetailView: UIView {
         return favButton
     }()
     
-    private lazy var noteButton: UIButton = {
+     lazy var noteButton: UIButton = {
         let noteButton = UIButton()
         noteButton.setTitle("Add note", for: .normal)
         noteButton.setImage(UIImage(systemName: "pencil.circle.fill"), for: .normal)
@@ -53,6 +53,7 @@ class DetailView: UIView {
     private lazy var metacriticLabel = makeLabel(font: .systemFont(ofSize: 16))
     private lazy var genreLabel = makeLabel(font: .systemFont(ofSize: 16))
     private lazy var noteLabel = makeLabel(font: .boldSystemFont(ofSize: 20))
+    private lazy var usersNote = makeLabel(font: .systemFont(ofSize: 18))
     
     
     
@@ -63,7 +64,8 @@ class DetailView: UIView {
             HStack,
             descriptionLabel,
             buttonStack,
-            noteLabel
+            noteLabel,
+            usersNote
         ])
         VStackView.axis = .vertical
         VStackView.spacing = 20
@@ -145,5 +147,8 @@ extension DetailView {
         gameImage.loadFrom(URLAddress: game.backgroundImage ?? "")
         descriptionLabel.text = game.descriptionRaw
         noteLabel.text = "Your Note"
+        let game = Current.coreDataManager.getGame(slug: game.slug ?? "")
+        let note = game?.note
+        usersNote.text = note
     }
 }
