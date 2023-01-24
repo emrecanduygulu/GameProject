@@ -20,6 +20,9 @@
 		255349A229805CDB007D860F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255349A129805CDB007D860F /* Environment.swift */; };
 		255349A42980608D007D860F /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255349A32980608D007D860F /* NoteView.swift */; };
 		255349A629806816007D860F /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255349A529806816007D860F /* NoteViewController.swift */; };
+		2553499529805029007D860F /* NotedGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553499429805029007D860F /* NotedGamesView.swift */; };
+		255349972980505C007D860F /* NotedGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255349962980505C007D860F /* NotedGamesViewController.swift */; };
+		25534999298050AA007D860F /* NotedGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25534998298050AA007D860F /* NotedGamesViewModel.swift */; };
 		2569BBA12976DB2400847AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBA02976DB2400847AB3 /* AppDelegate.swift */; };
 		2569BBAB2976DB2400847AB3 /* GameProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBA92976DB2400847AB3 /* GameProject.xcdatamodeld */; };
 		2569BBAD2976DB2600847AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2569BBAC2976DB2600847AB3 /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 		255349A129805CDB007D860F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		255349A32980608D007D860F /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		255349A529806816007D860F /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		2553499429805029007D860F /* NotedGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesView.swift; sourceTree = "<group>"; };
+		255349962980505C007D860F /* NotedGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesViewController.swift; sourceTree = "<group>"; };
+		25534998298050AA007D860F /* NotedGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesViewModel.swift; sourceTree = "<group>"; };
 		2569BB9D2976DB2400847AB3 /* GameProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2569BBA02976DB2400847AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2569BBAA2976DB2400847AB3 /* GameProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameProject.xcdatamodel; sourceTree = "<group>"; };
@@ -124,6 +130,15 @@
 				2553499D29805C85007D860F /* GameInterface.swift */,
 			);
 			path = Model;
+            sourceTree = "<group>";
+		2553499329804FB0007D860F /* NotedGames */ = {
+			isa = PBXGroup;
+			children = (
+				2553499429805029007D860F /* NotedGamesView.swift */,
+				255349962980505C007D860F /* NotedGamesViewController.swift */,
+				25534998298050AA007D860F /* NotedGamesViewModel.swift */,
+			);
+			path = NotedGames;
 			sourceTree = "<group>";
 		};
 		2569BB942976DB2400847AB3 = {
@@ -180,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				2501DADA297FF77C00D74EDD /* Note */,
+				2553499329804FB0007D860F /* NotedGames */,
 				2529DACB297EE48A00B60A60 /* Detail */,
 				25CD78552978273300721955 /* List */,
 			);
@@ -292,10 +308,12 @@
 			files = (
 				2501DADC297FF79400D74EDD /* NoteViewModel.swift in Sources */,
 				25CBE1E7297C378B002FFDD3 /* TabBar.swift in Sources */,
+				2553499529805029007D860F /* NotedGamesView.swift in Sources */,
 				2529DACF297EF07300B60A60 /* DetailModel.swift in Sources */,
 				25CBE1EB297C41E3002FFDD3 /* Colors.swift in Sources */,
 				255349A42980608D007D860F /* NoteView.swift in Sources */,
 				2569BBAB2976DB2400847AB3 /* GameProject.xcdatamodeld in Sources */,
+				25534999298050AA007D860F /* NotedGamesViewModel.swift in Sources */,
 				25CBE1E9297C3966002FFDD3 /* TabBarItems.swift in Sources */,
 				2569BBA12976DB2400847AB3 /* AppDelegate.swift in Sources */,
 				2569BBB92976E00300847AB3 /* ListViewModel.swift in Sources */,
@@ -306,6 +324,7 @@
 				25CD785A29784BC200721955 /* UIImageViewExtension.swift in Sources */,
 				25CD78572978383A00721955 /* CellView.swift in Sources */,
 				2529DAD3297F017A00B60A60 /* DetailView.swift in Sources */,
+				255349972980505C007D860F /* NotedGamesViewController.swift in Sources */,
 				25CD785F29784EE400721955 /* ListViewController.swift in Sources */,
 				25CD785C29784C0300721955 /* ListView.swift in Sources */,
 				2529DAD1297EFEDC00B60A60 /* DetailViewController.swift in Sources */,
