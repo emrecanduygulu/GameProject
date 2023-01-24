@@ -8,6 +8,11 @@
 import UIKit
 
 class DetailViewController: UIViewController, DetailViewModelOutput {
+    
+    func addNoteTapped(details: DetailModel) {
+        present(NoteViewController(with: NoteViewModel(detailModel: details)), animated: false)
+    }
+    
     func showDetails(details: DetailModel) {
         viewSource.populate(with: details)
     }
@@ -44,11 +49,22 @@ class DetailViewController: UIViewController, DetailViewModelOutput {
         view = viewSource
         view.backgroundColor = .white
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.onViewDidAppear()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.output = self
-        viewModel.onViewDidLoad()
         title = "Detail"
-        
+        viewSource.noteButton.addTarget(nil, action: #selector(noteButtonTapped), for: .touchUpInside)
+        viewSource.favoriteButton.addTarget(nil, action: #selector(favButtonTapped), for: .touchUpInside)
+    }
+    @objc func noteButtonTapped() {
+        viewModel.addNoteTapped()
+    }
+    @objc func favButtonTapped() {
+        viewModel.addFavTapped()
     }
 }

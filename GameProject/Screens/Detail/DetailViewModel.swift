@@ -10,6 +10,7 @@ import Foundation
 class DetailViewModel {
   
     var gameId: Int
+    var detailModel: DetailModel?
     var output: DetailViewModelOutput?
     
     private func fetchDetails(for gameId: Int) {
@@ -29,7 +30,7 @@ class DetailViewModel {
                     DispatchQueue.main.async {
                         self.output?.isLoading(false)
                         self.output?.showDetails(details: result)
-                        
+                        self.detailModel = result
                     }
                 } catch {
                     print("Decoding error")
@@ -46,17 +47,29 @@ class DetailViewModel {
 }
 
 protocol DetailViewModelInput {
-    func onViewDidLoad()
+    func onViewDidAppear()
+    func addFavTapped()
+    func addNoteTapped()
 }
 
 protocol DetailViewModelOutput {
     func showDetails(details: DetailModel)
     func showError(errorMessage: String)
     func isLoading(_ value: Bool)
+    func addNoteTapped(details: DetailModel)
 }
 
 extension DetailViewModel: DetailViewModelInput {
-    func onViewDidLoad() {
+    func onViewDidAppear() {
         fetchDetails(for: gameId)
+    }
+    func addFavTapped() {
+        guard let game = Current.coreDataManager.getGame(slug: detailModel?.slug ?? "") else { return }
+        game.isFavorited = !game.isFavorited
+        Current.coreDataManager.updateGame(slug: game.slug, newVersion: game)
+    }
+    func addNoteTapped() {
+        guard let detailModel = detailModel else {return }
+        output?.addNoteTapped(details: detailModel)
     }
 }
