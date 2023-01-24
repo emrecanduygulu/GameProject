@@ -34,9 +34,12 @@ class NoteViewModel {
                 slug: detailModel.slug ?? "no-name",
                 isFavorited: false,
                 isNoted: true,
-                metacritic: Int64(detailModel.metacritic ?? 0),
+                metacritic: detailModel.metacritic ?? 0,
                 name: detailModel.name ?? "No Name",
-                note: newNote
+                note: newNote,
+                rating: detailModel.rating ?? 0.0,
+                ratingCount: detailModel.ratingCount ?? 0,
+                id: detailModel.id ?? 0
             )
             self.note = newNote
             Current.coreDataManager.saveGame(game: game)

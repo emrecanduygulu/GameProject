@@ -26,6 +26,9 @@
 		2569BBB02976DB2600847AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2569BBAE2976DB2600847AB3 /* LaunchScreen.storyboard */; };
 		2569BBB92976E00300847AB3 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBB82976E00300847AB3 /* ListViewModel.swift */; };
 		2569BBBE2976E8E700847AB3 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2569BBBD2976E8E700847AB3 /* GameModel.swift */; };
+		2593D7DF29807E5000009D3B /* NotedGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7DE29807E5000009D3B /* NotedGamesView.swift */; };
+		2593D7E129807E7200009D3B /* NotedGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E029807E7200009D3B /* NotedGamesViewModel.swift */; };
+		2593D7E329807E9A00009D3B /* NotedGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E229807E9A00009D3B /* NotedGamesViewController.swift */; };
 		25CBE1E7297C378B002FFDD3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1E6297C378B002FFDD3 /* TabBar.swift */; };
 		25CBE1E9297C3966002FFDD3 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1E8297C3965002FFDD3 /* TabBarItems.swift */; };
 		25CBE1EB297C41E3002FFDD3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1EA297C41E3002FFDD3 /* Colors.swift */; };
@@ -56,6 +59,9 @@
 		2569BBB12976DB2600847AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2569BBB82976E00300847AB3 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		2569BBBD2976E8E700847AB3 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		2593D7DE29807E5000009D3B /* NotedGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesView.swift; sourceTree = "<group>"; };
+		2593D7E029807E7200009D3B /* NotedGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesViewModel.swift; sourceTree = "<group>"; };
+		2593D7E229807E9A00009D3B /* NotedGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotedGamesViewController.swift; sourceTree = "<group>"; };
 		25CBE1E6297C378B002FFDD3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		25CBE1E8297C3965002FFDD3 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		25CBE1EA297C41E3002FFDD3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -167,6 +173,16 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		2593D7DD29807E3D00009D3B /* NotedGames */ = {
+			isa = PBXGroup;
+			children = (
+				2593D7DE29807E5000009D3B /* NotedGamesView.swift */,
+				2593D7E029807E7200009D3B /* NotedGamesViewModel.swift */,
+				2593D7E229807E9A00009D3B /* NotedGamesViewController.swift */,
+			);
+			path = NotedGames;
+			sourceTree = "<group>";
+		};
 		25CBE1E5297C3762002FFDD3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +195,7 @@
 		25CD78542978272A00721955 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2593D7DD29807E3D00009D3B /* NotedGames */,
 				2501DADA297FF77C00D74EDD /* Note */,
 				2529DACB297EE48A00B60A60 /* Detail */,
 				25CD78552978273300721955 /* List */,
@@ -291,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2501DADC297FF79400D74EDD /* NoteViewModel.swift in Sources */,
+				2593D7DF29807E5000009D3B /* NotedGamesView.swift in Sources */,
 				25CBE1E7297C378B002FFDD3 /* TabBar.swift in Sources */,
 				2529DACF297EF07300B60A60 /* DetailModel.swift in Sources */,
 				25CBE1EB297C41E3002FFDD3 /* Colors.swift in Sources */,
@@ -310,7 +328,9 @@
 				25CD785C29784C0300721955 /* ListView.swift in Sources */,
 				2529DAD1297EFEDC00B60A60 /* DetailViewController.swift in Sources */,
 				255349A629806816007D860F /* NoteViewController.swift in Sources */,
+				2593D7E329807E9A00009D3B /* NotedGamesViewController.swift in Sources */,
 				2553499E29805C85007D860F /* GameInterface.swift in Sources */,
+				2593D7E129807E7200009D3B /* NotedGamesViewModel.swift in Sources */,
 				255349A029805CAD007D860F /* CoreDataManager.swift in Sources */,
 				2501DAE0298000D300D74EDD /* Game+CoreDataProperties.swift in Sources */,
 			);
