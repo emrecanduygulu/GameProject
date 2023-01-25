@@ -31,6 +31,7 @@ class DetailViewModel {
                         self.output?.isLoading(false)
                         self.output?.showDetails(details: result)
                         self.detailModel = result
+                        self.gameAlreadyFavorited()
                     }
                 } catch {
                     print("Decoding error")
@@ -40,6 +41,12 @@ class DetailViewModel {
                 }
             }
         }.resume()
+    }
+    
+    private func gameAlreadyFavorited() {
+        if let game = Current.coreDataManager.getGame(slug: detailModel?.slug ?? ""), game.isFavorited {
+            output?.updateFavoritesLabel(string: "Already favorite")
+        }
     }
     
     init(gameId: Int) {
@@ -58,6 +65,7 @@ protocol DetailViewModelOutput {
     func showError(errorMessage: String)
     func isLoading(_ value: Bool)
     func addNoteTapped(details: DetailModel)
+    func updateFavoritesLabel(string: String)
 }
 
 extension DetailViewModel: DetailViewModelInput {
@@ -65,9 +73,16 @@ extension DetailViewModel: DetailViewModelInput {
         fetchDetails(for: gameId)
     }
     func addFavTapped() {
-        guard let game = Current.coreDataManager.getGame(slug: detailModel?.slug ?? "") else { return }
-        game.isFavorited = !game.isFavorited
-        Current.coreDataManager.updateGame(slug: game.slug, newVersion: game)
+        if let game = Current.coreDataManager.getGame(slug: detailModel?.slug ?? "") {
+            let copy = game
+            copy.isFavorited = !game.isFavorited
+            output?.updateFavoritesLabel(string: copy.isFavorited ? "Already favorite" : "Add to favorites")
+            Current.coreDataManager.updateGame(slug: detailModel?.slug ?? "", newVersion: copy)
+        } else {
+            let game = GameInterface(backgroundImage: detailModel?.backgroundImage ?? "", descriptionRaw: detailModel?.descriptionRaw ?? "", genre: detailModel?.genres.first?.name ?? "", slug: detailModel?.slug ?? "", isFavorited: true, isNoted: false, metacritic: detailModel?.metacritic ?? 0, name: detailModel?.name ?? "", note: "", rating: detailModel?.rating ?? 0.0, ratingCount: detailModel?.ratingCount ?? 0, id: detailModel?.id ?? 0)
+            output?.updateFavoritesLabel(string: "Already favorite")
+            Current.coreDataManager.saveGame(game: game)
+        }
     }
     func addNoteTapped() {
         guard let detailModel = detailModel else {return }

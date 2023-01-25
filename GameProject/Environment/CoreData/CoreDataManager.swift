@@ -36,11 +36,22 @@ struct CoreDataManager {
     }
     
     mutating func updateGame(slug: String, newVersion: Game) {
-        guard let game = games.first(where: { $0.slug == slug }) else { return }
-        context.delete(game)
-        context.insert(newVersion)
-        save()
         getAllGames()
+        guard let game = games.first(where: { $0.slug == slug }) else { return }
+            game.setValue(newVersion.backgroundImage, forKey: "backgroundImage")
+            game.setValue(newVersion.descriptionRaw, forKey: "descriptionRaw")
+            game.setValue(newVersion.genre, forKey: "genre")
+            game.setValue(newVersion.slug, forKey: "slug")
+            game.setValue(newVersion.isFavorited, forKey: "isFavorited")
+            game.setValue(newVersion.isNoted, forKey: "isNoted")
+            game.setValue(newVersion.metacritic, forKey: "metacritic")
+            game.setValue(newVersion.name, forKey: "name")
+            game.setValue(newVersion.note, forKey: "note")
+            game.setValue(newVersion.rating, forKey: "rating")
+            game.setValue(newVersion.ratingCount, forKey: "ratingCount")
+            game.setValue(newVersion.id, forKey: "id")
+            save()
+            getAllGames()
     }
     
     mutating func saveGame(game: GameInterface) {
