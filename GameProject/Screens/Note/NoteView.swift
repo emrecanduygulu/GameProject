@@ -11,7 +11,7 @@ class NoteView: UIView {
     
     lazy var saveButton: UIButton = {
         let saveButton = UIButton()
-        saveButton.setTitle("Save", for: .normal)
+        saveButton.setTitle("save".localized(), for: .normal)
         saveButton.setImage(UIImage(systemName: "square.and.arrow.down"), for: .normal)
         saveButton.tintColor = .darkTeal
         saveButton.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +22,7 @@ class NoteView: UIView {
     
      lazy var textField: UITextField = {
         let tField = UITextField()
-        tField.placeholder = "Enter your note..."
+        tField.placeholder = "enter_your_note".localized()
         tField.keyboardType = .default
         tField.returnKeyType = .done
         tField.font = .systemFont(ofSize: 18)

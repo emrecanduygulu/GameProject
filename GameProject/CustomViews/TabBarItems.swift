@@ -13,21 +13,21 @@ enum TabBarItems: Int, CaseIterable {
     var controller: UIViewController {
         switch self {
         case .home:
-            let tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.fill"), selectedImage: UIImage(systemName: "house.fill"))
+            let tabBarItem = UITabBarItem(title: "home".localized(), image: UIImage(systemName: "house.fill"), selectedImage: UIImage(systemName: "house.fill"))
             let controller = ListViewController()
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.tabBarItem = tabBarItem
             return navigationController
             
         case .favorites:
-            let tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star.fill"), selectedImage: UIImage(systemName: "star.fill"))
+            let tabBarItem = UITabBarItem(title: "favorites".localized(), image: UIImage(systemName: "star.fill"), selectedImage: UIImage(systemName: "star.fill"))
             let controller = FavoritesViewController()
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.tabBarItem = tabBarItem
             return navigationController
             
         case .notedGames:
-            let tabBarItem = UITabBarItem(title: "Noted Games", image: UIImage(systemName: "note.text"), selectedImage: UIImage(systemName: "note.text"))
+            let tabBarItem = UITabBarItem(title: "noted_games".localized(), image: UIImage(systemName: "note.text"), selectedImage: UIImage(systemName: "note.text"))
             let controller = NotedGamesViewController()
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.tabBarItem = tabBarItem

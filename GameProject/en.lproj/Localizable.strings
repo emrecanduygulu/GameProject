@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  GameProject
+
+  Created by emre can duygulu on 25.01.2023.
+  
+*/
+
+"home" = "Home";
+"search_a_game" = "Search a game...";
+"rating_count" = "Rating count: ";
+"favorites" = "Favorites";
+"noted_games" = "Noted Games";
+"detail" = "Detail";
+"metacritic_score" = "Metacritic score: ";
+"genre" = "Genre: ";
+"add_to_favorites" = "Add to favorites";
+"add_note" = "Add note";
+"your_note" = "Your note";
+"favorites" = "Favorites";
+"enter_your_note" = "Enter your note...";
+"save" = "Save";

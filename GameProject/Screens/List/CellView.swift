@@ -116,7 +116,7 @@ extension CellView {
     func populate(with game: Result){
         gameLabel.text = game.name
         rating.text = "\(game.rating ?? 0.0)"
-        ratingCount.text = "Rating count: \(game.ratingsCount ?? 0)"
+        ratingCount.text = "rating_count".localized() + "\(game.ratingsCount ?? 0)"
         gameImage.loadFrom(URLAddress: game.backgroundImage ?? "")
         rating.textColor = setTextColor(for: game.rating ?? 0.0)
     }

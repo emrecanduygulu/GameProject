@@ -13,7 +13,7 @@ class ListView: UIView {
     
     lazy var searchBar: UISearchBar = {
         let sBar = UISearchBar()
-        sBar.placeholder = "Search a game..."
+        sBar.placeholder = "search_a_game".localized()
         sBar.translatesAutoresizingMaskIntoConstraints = false
         return sBar
     }()

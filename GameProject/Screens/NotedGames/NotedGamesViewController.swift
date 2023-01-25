@@ -64,7 +64,7 @@ class NotedGamesViewController: UIViewController, NotedGamesViewModelOutput, UIT
         viewSource.tableView.delegate = self
         viewSource.tableView.dataSource = self
         viewModel.output = self
-        title = "Noted Games"
+        title = "noted_games".localized()
         
     }
 }

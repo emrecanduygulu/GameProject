@@ -86,7 +86,7 @@ class ListViewController: UIViewController, ListViewModelOutput, UITableViewDele
         viewSource.tableView.dataSource = self
         viewSource.searchBar.delegate = self
         viewModel.output = self
-        title = "Home"
+        title = "home".localized()
         viewModel.onViewDidLoad()
     }
 }

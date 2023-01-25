@@ -32,6 +32,8 @@
 		2593D7E6298097FD00009D3B /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E5298097FD00009D3B /* FavoritesView.swift */; };
 		2593D7E82980990300009D3B /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E72980990300009D3B /* FavoritesViewModel.swift */; };
 		2593D7EA298099D200009D3B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E9298099D200009D3B /* FavoritesViewController.swift */; };
+		2593D7F52980A31600009D3B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2593D7F72980A31600009D3B /* Localizable.strings */; };
+		2593D7FD2980A6C000009D3B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7FC2980A6C000009D3B /* String.swift */; };
 		25CBE1E7297C378B002FFDD3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1E6297C378B002FFDD3 /* TabBar.swift */; };
 		25CBE1E9297C3966002FFDD3 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1E8297C3965002FFDD3 /* TabBarItems.swift */; };
 		25CBE1EB297C41E3002FFDD3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1EA297C41E3002FFDD3 /* Colors.swift */; };
@@ -68,6 +70,10 @@
 		2593D7E5298097FD00009D3B /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		2593D7E72980990300009D3B /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		2593D7E9298099D200009D3B /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		2593D7F62980A31600009D3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2593D7F82980A31F00009D3B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2593D7F92980A31F00009D3B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2593D7FC2980A6C000009D3B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		25CBE1E6297C378B002FFDD3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		25CBE1E8297C3965002FFDD3 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		25CBE1EA297C41E3002FFDD3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		2569BB9F2976DB2400847AB3 /* GameProject */ = {
 			isa = PBXGroup;
 			children = (
+				2593D7F72980A31600009D3B /* Localizable.strings */,
 				2553499A29805C37007D860F /* Environment */,
 				25CBE1E5297C3762002FFDD3 /* CustomViews */,
 				25CD785829784BB000721955 /* Extensions */,
@@ -236,6 +243,7 @@
 			children = (
 				25CD785929784BC200721955 /* UIImageViewExtension.swift */,
 				25CBE1EA297C41E3002FFDD3 /* Colors.swift */,
+				2593D7FC2980A6C000009D3B /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 2569BB942976DB2400847AB3;
 			packageReferences = (
@@ -313,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2569BBB02976DB2600847AB3 /* LaunchScreen.storyboard in Resources */,
+				2593D7F52980A31600009D3B /* Localizable.strings in Resources */,
 				2569BBAD2976DB2600847AB3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +346,7 @@
 				2569BBA12976DB2400847AB3 /* AppDelegate.swift in Sources */,
 				2569BBB92976E00300847AB3 /* ListViewModel.swift in Sources */,
 				2569BBBE2976E8E700847AB3 /* GameModel.swift in Sources */,
+				2593D7FD2980A6C000009D3B /* String.swift in Sources */,
 				2501DADF298000D300D74EDD /* Game+CoreDataClass.swift in Sources */,
 				255349A229805CDB007D860F /* Environment.swift in Sources */,
 				2529DACD297EEBDA00B60A60 /* DetailViewModel.swift in Sources */,
@@ -363,8 +374,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				2569BBAF2976DB2600847AB3 /* Base */,
+				2593D7F82980A31F00009D3B /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2593D7F72980A31600009D3B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2593D7F62980A31600009D3B /* en */,
+				2593D7F92980A31F00009D3B /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -374,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -434,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
