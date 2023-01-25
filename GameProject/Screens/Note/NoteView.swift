@@ -53,7 +53,8 @@ class NoteView: UIView {
             VStack.topAnchor.constraint(equalTo: self.topAnchor),
             VStack.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             VStack.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            textField.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+            textField.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            saveButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

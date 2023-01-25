@@ -20,3 +20,7 @@
 "favorites" = "Favorites";
 "enter_your_note" = "Enter your note...";
 "save" = "Save";
+"success" = "Success";
+"saved" = "Your not has been saved!";
+"whoops" = "Whoops...";
+"something_went_wrong" = "Something went wrong...";
