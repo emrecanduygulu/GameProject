@@ -45,7 +45,7 @@ class DetailViewModel {
     
     private func gameAlreadyFavorited() {
         if let game = Current.coreDataManager.getGame(slug: detailModel?.slug ?? ""), game.isFavorited {
-            output?.updateFavoritesLabel(string: "Already favorite")
+            output?.updateFavoritesLabel(string: "already_favorite".localized())
         }
     }
     
@@ -76,11 +76,11 @@ extension DetailViewModel: DetailViewModelInput {
         if let game = Current.coreDataManager.getGame(slug: detailModel?.slug ?? "") {
             let copy = game
             copy.isFavorited = !game.isFavorited
-            output?.updateFavoritesLabel(string: copy.isFavorited ? "Already favorite" : "Add to favorites")
+            output?.updateFavoritesLabel(string: copy.isFavorited ? "already_favorite".localized() : "add_to_favorites".localized())
             Current.coreDataManager.updateGame(slug: detailModel?.slug ?? "", newVersion: copy)
         } else {
             let game = GameInterface(backgroundImage: detailModel?.backgroundImage ?? "", descriptionRaw: detailModel?.descriptionRaw ?? "", genre: detailModel?.genres.first?.name ?? "", slug: detailModel?.slug ?? "", isFavorited: true, isNoted: false, metacritic: detailModel?.metacritic ?? 0, name: detailModel?.name ?? "", note: "", rating: detailModel?.rating ?? 0.0, ratingCount: detailModel?.ratingCount ?? 0, id: detailModel?.id ?? 0)
-            output?.updateFavoritesLabel(string: "Already favorite")
+            output?.updateFavoritesLabel(string: "already_favorite".localized())
             Current.coreDataManager.saveGame(game: game)
         }
     }
