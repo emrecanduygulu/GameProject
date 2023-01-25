@@ -16,7 +16,8 @@ This is the detail view of a game.
 ![Simulator Screen Shot - iPhone 14 Pro Max - 2023-01-25 at 11 42 55](https://user-images.githubusercontent.com/58653877/214518888-6cb48cc9-5a8c-45aa-b623-dc11da60b05c.png)
 
 You can take notes in the detail screen.
-![Simulator Screen Shot - iPhone 14 Pro Max - 2023-01-25 at 11 42 55](https://user-images.githubusercontent.com/58653877/214519117-abd3f96c-31d4-456c-a73b-c048757d1a5c.png)
+![Simulator Screen Shot - iPhone 14 Pro Max - 2023-01-25 at 11 49 36](https://user-images.githubusercontent.com/58653877/214519861-1ef079fd-e628-41a0-a3e3-a6d71f8ff39a.png)
+
 
 This is the detail screen after you favorited and took notes.
 ![Simulator Screen Shot - iPhone 14 Pro Max - 2023-01-25 at 11 50 56](https://user-images.githubusercontent.com/58653877/214519318-5b6b5dd7-5baf-479a-b628-830294658693.png)
