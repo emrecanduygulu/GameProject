@@ -34,6 +34,7 @@
 		2593D7EA298099D200009D3B /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7E9298099D200009D3B /* FavoritesViewController.swift */; };
 		2593D7F52980A31600009D3B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2593D7F72980A31600009D3B /* Localizable.strings */; };
 		2593D7FD2980A6C000009D3B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593D7FC2980A6C000009D3B /* String.swift */; };
+		25B1630F2980B2D100604283 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B1630E2980B2D000604283 /* Alert.swift */; };
 		25CBE1E7297C378B002FFDD3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1E6297C378B002FFDD3 /* TabBar.swift */; };
 		25CBE1E9297C3966002FFDD3 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1E8297C3965002FFDD3 /* TabBarItems.swift */; };
 		25CBE1EB297C41E3002FFDD3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBE1EA297C41E3002FFDD3 /* Colors.swift */; };
@@ -74,6 +75,7 @@
 		2593D7F82980A31F00009D3B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2593D7F92980A31F00009D3B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2593D7FC2980A6C000009D3B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		25B1630E2980B2D000604283 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		25CBE1E6297C378B002FFDD3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		25CBE1E8297C3965002FFDD3 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		25CBE1EA297C41E3002FFDD3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				25CD785929784BC200721955 /* UIImageViewExtension.swift */,
 				25CBE1EA297C41E3002FFDD3 /* Colors.swift */,
 				2593D7FC2980A6C000009D3B /* String.swift */,
+				25B1630E2980B2D000604283 /* Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				2529DAD1297EFEDC00B60A60 /* DetailViewController.swift in Sources */,
 				255349A629806816007D860F /* NoteViewController.swift in Sources */,
 				2593D7E82980990300009D3B /* FavoritesViewModel.swift in Sources */,
+				25B1630F2980B2D100604283 /* Alert.swift in Sources */,
 				2593D7EA298099D200009D3B /* FavoritesViewController.swift in Sources */,
 				2593D7E329807E9A00009D3B /* NotedGamesViewController.swift in Sources */,
 				2553499E29805C85007D860F /* GameInterface.swift in Sources */,

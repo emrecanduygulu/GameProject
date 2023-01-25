@@ -19,3 +19,7 @@
 "your_note" = "Notum";
 "enter_your_note" = "Notunu gir...";
 "save" = "Kaydet";
+"success" = "Başarılı";
+"saved" = "Notun kaydedildi!";
+"whoops" = "Ups...";
+"something_went_wrong" = "Bir şeyler yanlış gitti...";

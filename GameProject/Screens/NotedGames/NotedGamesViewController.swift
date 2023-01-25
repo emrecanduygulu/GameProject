@@ -29,6 +29,7 @@ class NotedGamesViewController: UIViewController, NotedGamesViewModelOutput, UIT
     
     func showError(errorMessage: String) {
         print("Error")
+        showAlert(withTitle: "whoops".localized(), withMessage: "something_went_wrong".localized())
     }
     
     func openGameDetail(game: Result) {

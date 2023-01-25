@@ -36,5 +36,7 @@ class NoteViewController: UIViewController, NoteViewModelOutput {
     @objc func saveButtonTapped() {
         guard let text = viewSource.textField.text else { return }
         viewModel.save(value: text)
+        showAlert(withTitle: "success".localized(), withMessage: "saved".localized())
     }
 }
+

@@ -36,6 +36,7 @@ class DetailViewModel {
                     print("Decoding error")
                     self.output?.showError(errorMessage: "Decoding Error")
                     self.output?.isLoading(false)
+                    
                 }
             }
         }.resume()
