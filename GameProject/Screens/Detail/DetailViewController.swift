@@ -57,7 +57,7 @@ class DetailViewController: UIViewController, DetailViewModelOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.output = self
-        title = "Detail"
+        title = "detail".localized()
         viewSource.noteButton.addTarget(nil, action: #selector(noteButtonTapped), for: .touchUpInside)
         viewSource.favoriteButton.addTarget(nil, action: #selector(favButtonTapped), for: .touchUpInside)
     }

@@ -64,7 +64,7 @@ class FavoritesViewController: UIViewController, FavoritesViewModelOutput, UITab
         viewSource.tableView.delegate = self
         viewSource.tableView.dataSource = self
         viewModel.output = self
-        title = "Favorites"
+        title = "favorites".localized()
         
     }
 }

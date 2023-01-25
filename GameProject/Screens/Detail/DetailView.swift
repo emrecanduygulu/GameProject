@@ -21,7 +21,7 @@ class DetailView: UIView {
     
      lazy var favoriteButton: UIButton = {
         let favButton = UIButton()
-        favButton.setTitle("Add to favorites", for: .normal)
+         favButton.setTitle("add_to_favorites".localized(), for: .normal)
         favButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
         favButton.tintColor = .darkTeal
         favButton.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +32,7 @@ class DetailView: UIView {
     
      lazy var noteButton: UIButton = {
         let noteButton = UIButton()
-        noteButton.setTitle("Add note", for: .normal)
+         noteButton.setTitle("add_note".localized(), for: .normal)
         noteButton.setImage(UIImage(systemName: "pencil.circle.fill"), for: .normal)
         noteButton.translatesAutoresizingMaskIntoConstraints = false
         noteButton.tintColor = .lightPink
@@ -142,11 +142,11 @@ extension DetailView {
     func populate(with game: DetailModel) {
         
         nameLabel.text = game.name
-        metacriticLabel.text = "Metacritic score: \(game.metacritic ?? 9)"
-        genreLabel.text = "Genre: \(game.genres.first?.name ?? "")"
+        metacriticLabel.text = "metacritic_score".localized() + "\(game.metacritic ?? 9)"
+        genreLabel.text = "genre".localized() + (game.genres.first?.name ?? "")
         gameImage.loadFrom(URLAddress: game.backgroundImage ?? "")
         descriptionLabel.text = game.descriptionRaw
-        noteLabel.text = "Your Note"
+        noteLabel.text = "your_note".localized()
         let game = Current.coreDataManager.getGame(slug: game.slug ?? "")
         let note = game?.note
         usersNote.text = note
