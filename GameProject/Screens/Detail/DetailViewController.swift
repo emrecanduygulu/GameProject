@@ -8,6 +8,10 @@
 import UIKit
 
 class DetailViewController: UIViewController, DetailViewModelOutput {
+    func updateFavoritesLabel(string: String) {
+        viewSource.favoriteButton.setTitle(string, for: .normal)
+    }
+    
     
     func addNoteTapped(details: DetailModel) {
         present(NoteViewController(with: NoteViewModel(detailModel: details)), animated: false)
