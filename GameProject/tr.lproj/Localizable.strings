@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  GameProject
+
+  Created by emre can duygulu on 25.01.2023.
+  
+*/
+
+"home" = "Anasayfa";
+"search_a_game" = "Bir oyun ara...";
+"rating_count" = "Oy sayısı: ";
+"favorites" = "Favoriler";
+"noted_games" = "Not Alınan Oyunlar";
+"detail" = "Detay";
+"metacritic_score" = "Metacritic puanı: ";
+"genre" = "Tür: ";
+"add_to_favorites" = "Favorilere ekle";
+"add_note" = "Not ekle";
+"your_note" = "Notum";
+"enter_your_note" = "Notunu gir...";
+"save" = "Kaydet";
+"success" = "Başarılı";
+"saved" = "Notun kaydedildi!";
+"whoops" = "Ups...";
+"something_went_wrong" = "Bir şeyler yanlış gitti...";
+"already_favorite" = "Zaten favorilerde";
